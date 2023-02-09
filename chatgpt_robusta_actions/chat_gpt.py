@@ -71,10 +71,10 @@ def chat_gpt_enricher(alert: PrometheusKubernetesAlert, params: ChatGPTTokenPara
         [
             CallbackBlock(
                 {
-                    f'Ask ChatGPT': CallbackChoice(
+                    f'点击查询ChatGPT': CallbackChoice(
                         action=show_chat_gpt_search,
                         action_params=ChatGPTParams(
-                            search_term=f"How to solve {alert_name} on Kubernetes?",
+                            search_term=f"在Kubernetes集群中怎么解决这个问题：{alert_name}",
                             chat_gpt_token=params.chat_gpt_token,
     ),
                     )
